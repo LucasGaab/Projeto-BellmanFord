@@ -1,8 +1,8 @@
 <h1 align="center"> Projeto Bellman Ford </h1>
 
 <p align="center">
-  <a target="blank" href="https://docs.google.com/document/d/1rvcLT5Pl_obZ-WexOLlq5vY75Xp_QZG-z7CQsbee1M4/edit?usp=sharing">Documentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a target="blank" href="https://docs.google.com/document/d/1pAnHM2-Ow10R58nudsLeQngBw9hN6VKfjI7xGicTEzo/edit?usp=sharing">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a target="blank" href="https://docs.google.com/document/d/1JY5OdV3Erxz0C-yTxyEKVBxz7tx9lN7XEREqk5QytnU/edit?usp=sharing">Documentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a target="blank" href="https://docs.google.com/document/d/1HMhA5z0cM5IsbLnBZBXc1oY2qnMcU8VOE-0XymlhPH4/edit">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a target="blank" href=https://github.com/jorgelcff/Sockets/blob/main/LICENSE>Licença </a>
 </p>
 
@@ -29,7 +29,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Jorge Luiz
 - Lucas Gabriel
-- Otávio Augusto
 
 ## :memo: Licença
 
