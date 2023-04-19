@@ -24,21 +24,29 @@ class Graph:
         distancias = ""
         for chave, valor in distancia.items():
             if valor != float("Inf") and valor != 0:
-                distancias += f'{origem} ---> {chave}: {valor:.2f} Km\n'
+                distancias += f"{origem} ---> {chave}: {valor:.2f} Km\n"
         return distancias
 
     def bellman_ford(self, inicio, final=''):
         if (inicio in self.nos) and ((final == '') or (final in self.nos)):
             origem = inicio
+            trajeto = []
             distancia = {i: float("Inf") for i in self.nos}
             distancia[inicio] = 0
             for _ in range(self.vertices - 1):
                 for inicio, fim, peso in self.grafo:
-                    if distancia[inicio] != float("Inf") and distancia[inicio] + peso < distancia[fim]:
-                        distancia[fim] = distancia[inicio] + peso
+                    try:
+                        if distancia[inicio] != float("Inf") and distancia[inicio] + peso < distancia[fim]:
+                            distancia[fim] = distancia[inicio] + peso
+                            trajeto.append(distancia[fim])
+                    except:
+                        pass
             for inicio, fim, peso in self.grafo:
-                if distancia[inicio] != float("Inf") and distancia[inicio] + peso < distancia[fim]:
-                    return
+                try:
+                    if distancia[inicio] != float("Inf") and distancia[inicio] + peso < distancia[fim]:
+                        return
+                except:
+                    pass
             if final == '':
                 return self.mostrar_estacoes(distancia, origem)
             elif distancia[final] == float("Inf"):
@@ -49,7 +57,16 @@ class Graph:
             return 'Parâmetros inválidos!'
 
 
-grafo = Graph(93)
+grafo = Graph(214)
+
+
+pontoInicio = input('Digite a primeira estação: ')
+pontoFim = input('Digite a segunda estação: ')
+
+
+print(grafo.bellman_ford(pontoInicio, pontoFim))
+
+
 # para  plotar o grafo a partir do terminal, descomentamos as linhas 3 e 4. Além disso, comentamos os código da linha 19 e descomentamos da  linah 18:
 # Atenção: caso isso seja feito, não conseguiremos  abrir o nosso html no browser localmente
 
